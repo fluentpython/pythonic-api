@@ -40,25 +40,25 @@ Estimated time per topic in minutes (total: 180', including 15' coffee break)
     * (3') Tutorial Overview
 * A simple but full-featured Pythonic class
     * (4') Object representation
-    * (10') Exercise: Implement an Alternative Constructor
     * (7') Formatted Displays
-    * (9') A Hashable Vector2d
-    * (4') "Private" and “Protected” Attributes in Python
-    * (5') The __slots__ Class Attribute: Use and Caveats
+    * (10') **Exercise:** Polar Format and Alternative Constructor
+    * (9') A Hashable ``Vector2d``
+    * (4') “Private” and “Protected” Attributes in Python
+    * (5') The ``__slots__`` Class Attribute: Use and Caveats
     * (9') Overriding Class Attributes
 * A Pythonic Sequence
     * (7') The Sequence Interface
-    * (15') Exercise: Implementing Sequence Behavior
+    * (15') **Exercise:** Implementing Sequence Behavior
 * (15') -------------- Coffee Break --------------
 * A Pythonic Sequence (continued)
-    * (14') Slice-Aware __getitem__
+    * (14') Slice-Aware ``__getitem__``
     * (7') Dynamic Attribute Access
-    * (10') Hashing and a Faster ==
+    * (10') Hashing and a Faster ``==``
     * (12') Exercise: Implement Formatting Support
 * Operator Overloading Done Right
     * (5') Unary Operators
-    * (10') Overloading + for Vector Addition
-    * (7') Overloading * for Scalar Multiplication
-    * (10') Exercise: Implement @ for Dot Product
+    * (7') Overloading ``*`` for Scalar Multiplication
+    * (10') Overloading ``+`` for Vector Addition
+    * (10') **Exercise:** Implement ``@`` for Dot Product
     * (7') Rich Comparison Operators
     * (7') Augmented Assignment Operators
