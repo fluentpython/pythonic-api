@@ -4,6 +4,13 @@ Vector: classe vetor euclideano
     >>> v1 = Vector([1, 2])
     >>> v1
     Vector([1.0, 2.0])
+    >>> format(v1)
+    '(1.0, 2.0)'
+    >>> format(v1, '.2f')
+    '(1.00, 2.00)'
+    >>> format(v1, '.3e')
+    '(1.000e+00, 2.000e+00)
+
 
 '''
 
@@ -31,4 +38,7 @@ class Vector:
             all(a == b for a, b in zip(self, other)))
 
     def __repr__(self):
-        return 'Vector({})'.format(list(self._components))
+        return 'Vector({})'.format(list(self))
+
+    def __format__(self, format_spec):
+        return repr(tuple(self))
