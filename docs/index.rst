@@ -5,12 +5,13 @@ Pythonic APIs
 Consistency
 ------------
 
-Exemplos::
+Python::
 
     len(text)  # string
     len(rate)  # array of floats
     len(names)  # list
 
+Java:
 
 .. code-block:: Java
 
