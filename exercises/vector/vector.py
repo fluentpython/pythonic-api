@@ -1,5 +1,5 @@
 """
-A multi-dimensional ``Vector`` class, take 5
+A multi-dimensional ``Vector`` class
 """
 
 from array import array
@@ -54,14 +54,22 @@ class Vector:
     def __rmul__(self, scalar):
         return self * scalar
 
-    # ...
+    # exercise solutions below...
 
-    def __matmul__(self, other):  # Python 3.5 only!
+    def __neg__(self):
+        return Vector(-x for x in self)
+
+    def __add__(self, other):
         try:
-            return sum(a * b for a, b in zip(self, other))
+            if len(self) != len(other):
+                raise ValueError('Only vectors of same length may be added.')
         except TypeError:
             return NotImplemented
+        return Vector(a + b for a, b in zip(self, other))
 
-    def __rmatmul__(self, other):
-        return self @ other  # syntax error if Python < 3.5
+    def __radd__(self, other):
+        return self + other
+
+
+
 
