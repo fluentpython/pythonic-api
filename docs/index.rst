@@ -14,6 +14,8 @@ Contents:
    inspiration
    vector
    exercise_1
+   strategy
+   exercise_2
 
 
 

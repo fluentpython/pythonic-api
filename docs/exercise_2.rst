@@ -1,17 +1,10 @@
-=============================
-Exercise #1: Vector operators
-=============================
-
-A. Preparation
----------------
-
-1. Install ``py.test``: ``$ pip install pytest``
-
-2. Clone repo at https://github.com/fluentpython/pythonic-api. You can also download a ``.zip`` file with the repository.
+=====================================
+Exercise #2: Strategy without classes
+=====================================
 
 
-B. Vector negation
-------------------
+A. Review class-based implementation
+------------------------------------
 
 1. Go to ``exercises/vector`` directory
 
