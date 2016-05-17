@@ -64,3 +64,4 @@ class Vector:
 
     def __rmatmul__(self, other):
         return self @ other  # só funciona em Python 3.5
+

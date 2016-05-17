@@ -208,6 +208,30 @@ Tests for operator `@` (Python >= 3.5), computing the dot product::
 .. literalinclude:: ../examples/vector_v5.py
 
 
+``vector_v5.py``
+----------------
+
+Importing::
+
+    >>> from examples.vector_v5 import Vector
+
+Tests for operator `@` (Python >= 3.5), computing the dot product::
+
+    >>> va = Vector([1, 2, 3])
+    >>> vz = Vector([5, 6, 7])
+    >>> va @ vz == 38.0  # 1*5 + 2*6 + 3*7
+    True
+    >>> [10, 20, 30] @ vz
+    380.0
+    >>> va @ 3
+    Traceback (most recent call last):
+      ...
+    TypeError: unsupported operand type(s) for @: 'Vector' and 'int'
+
+.. literalinclude:: ../examples/vector_v5.py
+
+
+
 ``vector_v6.py``
 ----------------
 
