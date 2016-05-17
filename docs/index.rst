@@ -1,28 +1,28 @@
 ==================
-Objetos Pythonicos
+Pythonic APIs
 ==================
 
-Consistência
+Consistency
 ------------
 
 Exemplos::
 
-    len(texto)  # string
-    len(pesos)  # array de floats
-    len(nomes)  # lista
+    len(text)  # string
+    len(rate)  # array of floats
+    len(names)  # list
 
 
 .. code-block:: Java
 
     texto.length()  // String
-    pesos.length    // array de floats
+    pesos.length    // array of floats
     nomes.size()    // ArrayList
 
 
 ``vector_v0.py``
 ----------------
 
-Preparação::
+Importing::
 
     >>> from examples.vector_v0 import Vector
 
@@ -68,7 +68,7 @@ Tests with more dimensions::
 ----------------
 
 
-Preparação::
+Importing::
 
     >>> from examples.vector_v1 import Vector
 
@@ -95,7 +95,7 @@ Vector representations::
 ``vector_v2.py``
 ----------------
 
-Preparação::
+Importing::
 
     >>> from examples.vector_v2 import Vector
 
@@ -117,7 +117,7 @@ Emulating sequences::
 ``vector_v3.py``
 ----------------
 
-Preparação::
+Importing::
 
     >>> from examples.vector_v3 import Vector
 
@@ -169,7 +169,7 @@ In Java, only the primitive types support the arithmentic operators. If a financ
 ``vector_v4.py``
 ----------------
 
-Preparação::
+Importing::
 
     >>> from examples.vector_v4 import Vector
 
@@ -187,7 +187,7 @@ The reversed operator::
 ``vector_v5.py``
 ----------------
 
-Preparação::
+Importing::
 
     >>> from examples.vector_v5 import Vector
 
@@ -204,13 +204,13 @@ Tests for operator `@` (Python >= 3.5), computing the dot product::
       ...
     TypeError: unsupported operand type(s) for @: 'Vector' and 'int'
 
-.. literalinclude:: examples/vector_v5.py
+.. literalinclude:: ../examples/vector_v5.py
 
 
 ``vector_v6.py``
 ----------------
 
-Preparação::
+Importing::
 
     >>> from examples.vector_v6 import Vector
 
