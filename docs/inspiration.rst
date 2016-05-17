@@ -71,6 +71,7 @@ With ``py.test``:
 
 .. literalinclude:: ../exercises/vector/test_vector_neg.py
 
+.. literalinclude:: ../exercises/vector/test_vector_add.py
 
 With ``unittest``:
 
