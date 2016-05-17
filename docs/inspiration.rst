@@ -61,3 +61,21 @@ Using ``urllib2``::
     # ------
     # 200
     # 'application/json'
+
+
+
+The ``py.test`` library and test runner
+----------------------------------------
+
+With ``py.test``:
+
+.. literalinclude:: ../exercises/vector/test_vector_neg.py
+
+
+With ``unittest``:
+
+.. literalinclude:: ../exercises/vector/test_xunit_vector_neg.py
+
+
+
+
