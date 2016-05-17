@@ -1,8 +1,9 @@
-# strategy_best.py
+# strategy_best3.py
 # Strategy pattern -- function-based implementation
-# selecting best promotion from static list of functions
+# selecting best promotion from imported module
 
 """
+    >>> from promotions import *
     >>> joe = Customer('John Doe', 0)
     >>> ann = Customer('Ann Smith', 1100)
     >>> cart = [LineItem('banana', 4, .5),
@@ -25,16 +26,19 @@
 
 Tests for ``best_promo`` strategy::
 
-    >>> Order(joe, long_order, best_promo)  # <1>
+    >>> Order(joe, long_order, best_promo)
     <Order total: 10.00 due: 9.30>
-    >>> Order(joe, banana_cart, best_promo)  # <2>
+    >>> Order(joe, banana_cart, best_promo)
     <Order total: 30.00 due: 28.50>
-    >>> Order(ann, cart, best_promo)  # <3>
+    >>> Order(ann, cart, best_promo)
     <Order total: 42.00 due: 39.90>
 
 """
 
 from collections import namedtuple
+import inspect
+
+import promotions
 
 Customer = namedtuple('Customer', 'name fidelity')
 
@@ -74,31 +78,10 @@ class Order:  # the Context
         return fmt.format(self.total(), self.due())
 
 
-def fidelity_promo(order):
-    """5% discount for customers with 1000 or more fidelity points"""
-    return order.total() * .05 if order.customer.fidelity >= 1000 else 0
+promos = [func for name, func in
+                inspect.getmembers(promotions, inspect.isfunction)]
 
-
-def bulk_item_promo(order):
-    """10% discount for each LineItem with 20 or more units"""
-    discount = 0
-    for item in order.cart:
-        if item.quantity >= 20:
-            discount += item.total() * .1
-    return discount
-
-
-def large_order_promo(order):
-    """7% discount for orders with 10 or more distinct items"""
-    distinct_items = {item.product for item in order.cart}
-    if len(distinct_items) >= 10:
-        return order.total() * .07
-    return 0
-
-
-promos = [fidelity_promo, bulk_item_promo, large_order_promo]  # <1>
-
-def best_promo(order):  # <2>
+def best_promo(order):
     """Select best discount available
     """
-    return max(promo(order) for promo in promos)  # <3>
+    return max(promo(order) for promo in promos)

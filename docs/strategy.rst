@@ -19,3 +19,9 @@ Rethinking strategy
 -----------------
 
 .. literalinclude:: ../exercises/strategy/strategy2.py
+
+
+``strategy3.py``
+-----------------
+
+.. literalinclude:: ../exercises/strategy/strategy3.py
