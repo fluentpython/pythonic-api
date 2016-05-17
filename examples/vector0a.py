@@ -4,18 +4,20 @@ Vector: classe vetor euclideano
     >>> v1 = Vector([1, 2])
     >>> v1
     Vector([1.0, 2.0])
-    >>> format(v1)
-    '(1.0, 2.0)'
-    >>> format(v1, '.2f')
-    '(1.00, 2.00)'
-    >>> format(v1, '.3e')
-    '(1.000e+00, 2.000e+00)
-
+    >>> v1 * 10
+    Vector([10.0, 20.0])
+    >>> v1 * 'x'
+    Traceback (most recent call last):
+      ...
+    TypeError: can't multiply sequence by non-int of type 'Vector'
+    >>> 10 * v1
+    Vector([10.0, 20.0])
 
 '''
 
 from array import array 
 import math
+import numbers
 
 class Vector:
 
@@ -42,3 +44,13 @@ class Vector:
 
     def __format__(self, format_spec):
         return repr(tuple(self))
+
+    def __mul__(self, scalar):
+        if isinstance(scalar, numbers.Real):
+            return Vector(n * scalar for n in self) 
+        else:
+            return NotImplemented
+
+    def __rmul__(self, other):
+        return self * other
+
