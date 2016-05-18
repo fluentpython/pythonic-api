@@ -2,6 +2,8 @@
 # Strategy pattern -- function-based implementation
 
 """
+This is a simple implementation of the classic Strategy
+
     >>> joe = Customer('John Doe', 0)  # <1>
     >>> ann = Customer('Ann Smith', 1100)
     >>> cart = [LineItem('banana', 4, .5),
