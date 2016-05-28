@@ -25,3 +25,8 @@ Rethinking strategy
 -----------------
 
 .. literalinclude:: ../exercises/strategy/strategy3.py
+
+``strategy_best4.py``
+---------------------
+
+.. literalinclude:: ../examples/strategy_best4.py
