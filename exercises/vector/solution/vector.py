@@ -63,9 +63,9 @@ class Vector:
         try:
             if len(self) != len(other):
                 raise ValueError('Only vectors of same length may be added.')
+            return Vector(a + b for a, b in zip(self, other))
         except TypeError:
             return NotImplemented
-        return Vector(a + b for a, b in zip(self, other))
 
     def __radd__(self, other):
         return self + other
