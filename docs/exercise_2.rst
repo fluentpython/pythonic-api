@@ -18,8 +18,8 @@ A. Review class-based implementation
 B. Refactor ``strategy.py``, changing concrete strategies into functions
 -------------------------------------------------------------------------
 
-2. Run doctest with the ``-o FAIL_FAST`` option to stop at first error or failure:
+2. Run doctest with the ``-f`` option to stop at first error or failure:
 
 .. code-block:: shell
 
-    $ python3 -m doctest strategy.py -o FAIL_FAST
+    $ python3 -m doctest strategy.py -f

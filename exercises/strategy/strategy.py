@@ -2,7 +2,7 @@
 # Strategy pattern -- function-based implementation
 
 """
-This is a simple implementation of the classic Strategy
+API for a function-based implementation of the Strategy pattern
 
     >>> joe = Customer('John Doe', 0)  # <1>
     >>> ann = Customer('Ann Smith', 1100)
